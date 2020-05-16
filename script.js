@@ -59,7 +59,7 @@ function createMain() {
       createTextElement("h3", "Data Binding", sectionFrag);
       createTextElement(
         "p",
-        "Let's take a look at what we can do with this, first we are going to test data binding with forms inputs, insert something in the form below and see the data binding in action, it's just a onkeyup event, but it works.",
+        "Let's take a look at what we can do with this, first, we are going to test data binding with forms inputs, insert something in the form below and see the data binding in action, it's just an onkeyup event, but it works.",
         sectionFrag
       );
 
@@ -92,7 +92,7 @@ function createList() {
       createTextElement("h1", "This is the list", headerFrag);
       createTextElement(
         "h2",
-        "Here you can dinamically add content",
+        "Here you can dynamically add content",
         headerFrag
       );
     });
@@ -118,7 +118,7 @@ function createAbout() {
       createTextElement("h1", "About this project", headerFrag);
       createTextElement(
         "p",
-        "This is just a very simple implementaion of data binding and routing using native javascript capabilities such as document fragments, this project is nothing more than just a test for fun, however it is open source so feel free to fork it anytime and make what you want of it",
+        "This is just a very simple implementation of data binding and routing using native javascript capabilities such as document fragments, this project is nothing more than just a test for fun, however, it is open source so feel free to fork it anytime and make what you want of it",
         headerFrag
       );
     });
