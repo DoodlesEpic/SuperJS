@@ -1,6 +1,9 @@
 # SuperJS
 A very simple for-fun project to play with imperative JavaScript capabilities.
 
+## Take a look!
+The project is hosted with GitHub pages here: https://doodlesepic.github.io/SuperJS/
+
 ## About this project
 This is just a very simple implementation of data binding and routing using native javascript capabilities such as document fragments, this project is nothing more than just a test for fun, however, it is open source so feel free to fork it anytime and make what you want of it
 
