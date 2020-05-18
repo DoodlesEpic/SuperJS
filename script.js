@@ -1,4 +1,5 @@
 const mainContainer = document.getElementsByTagName("main")[0];
+const asideContainer = document.getElementsByTagName("aside")[0];
 
 const headerContainer = document.getElementsByTagName("header")[0];
 const headerFrag = document.createDocumentFragment();
@@ -16,6 +17,9 @@ function cleanPage() {
 }
 
 function createPage(cb) {
+  if (window.innerWidth < 1300) {
+    toggleNavbar();
+  }
   cleanPage();
   cb();
 }
@@ -42,6 +46,14 @@ function createHeader(cb) {
 function createSection(cb) {
   cb();
   sectionContainer.appendChild(sectionFrag);
+}
+
+function toggleNavbar() {
+  if (asideContainer.classList.contains("closed")) {
+    asideContainer.classList.remove("closed");
+  } else {
+    asideContainer.classList.add("closed");
+  }
 }
 
 function createMain() {
