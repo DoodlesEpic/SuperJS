@@ -37,11 +37,6 @@ p, label {
     box-shadow: 0px 0px 2px 1px lightgrey;
 }
 
-.container aside .closed {
-    min-width: 0px;
-    max-width: 0px;
-}
-
 .container aside h1 {
     font-size: 3em;
     margin-top: 10px;
