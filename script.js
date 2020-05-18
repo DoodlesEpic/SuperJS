@@ -156,12 +156,7 @@ function createAbout() {
       );
       createTextElement(
         "p",
-        "I also plan on making updated to the CSS so the webpage displays nicely in mobile devices",
-        sectionFrag
-      );
-      createTextElement(
-        "p",
-        "And I want to do refactor on a lot of code too :P",
+        "And I want to refactor a lot of code too :P",
         sectionFrag
       );
     });
