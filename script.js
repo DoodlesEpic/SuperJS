@@ -34,7 +34,9 @@ function createTextInputElement(placeholder, where, keyupCb) {
   const input = document.createElement("input");
   input.type = "text";
   input.placeholder = placeholder;
-  input.onkeyup = (e) => keyupCb(e);
+  input.onkeyup = function (e) {
+    keyupCb(e);
+  };
   return where.appendChild(input);
 }
 
@@ -57,8 +59,8 @@ function toggleNavbar() {
 }
 
 function createMain() {
-  createPage(() => {
-    createHeader(() => {
+  createPage(function () {
+    createHeader(function () {
       createTextElement("h1", "Be welcome to Super JS", headerFrag);
       createTextElement(
         "h2",
@@ -67,7 +69,7 @@ function createMain() {
       );
     });
 
-    createSection(() => {
+    createSection(function () {
       createTextElement("h3", "Data Binding", sectionFrag);
       createTextElement(
         "p",
@@ -75,7 +77,7 @@ function createMain() {
         sectionFrag
       );
 
-      createTextInputElement("Try typing something", sectionFrag, (e) => {
+      createTextInputElement("Try typing something", sectionFrag, function (e) {
         dataBind.textContent = e.target.value;
       });
 
@@ -99,8 +101,8 @@ function createMain() {
 }
 
 function createList() {
-  createPage(() => {
-    createHeader(() => {
+  createPage(function () {
+    createHeader(function () {
       createTextElement("h1", "This is the list", headerFrag);
       createTextElement(
         "h2",
@@ -109,12 +111,12 @@ function createList() {
       );
     });
 
-    createSection(() => {
+    createSection(function () {
       const input = createTextInputElement("Insert something", sectionFrag);
 
       const button = document.createElement("button");
       button.textContent = "Add to the list";
-      button.onclick = (e) => {
+      button.onclick = function (e) {
         createTextElement("p", input.value, sectionContainer);
         input.value = "";
       };
@@ -125,8 +127,8 @@ function createList() {
 }
 
 function createAbout() {
-  createPage(() => {
-    createHeader(() => {
+  createPage(function () {
+    createHeader(function () {
       createTextElement("h1", "About this project", headerFrag);
       createTextElement(
         "p",
@@ -135,7 +137,7 @@ function createAbout() {
       );
     });
 
-    createSection(() => {
+    createSection(function () {
       createTextElement("h3", "How does it work?", sectionFrag);
       createTextElement(
         "p",
