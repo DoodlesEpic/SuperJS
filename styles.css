@@ -62,27 +62,19 @@ nav h1 {
     padding-right: 20px;
     background-color: white;
     box-shadow: 0px 0px 2px 1px lightgrey;
+    overflow: hidden;
+    transition: ease 0.2s;
 }
 
 .container aside.closed {
-    width: 2rem;
-    min-height: 2rem;
-    padding: 0px;
-    overflow: hidden;
-    border-radius: 100%;
-}
-
-.container aside.closed h1 {
-    font-size: 0;
+    width: 0;
+    padding: 0;
+    padding-top: 50px;
 }
 
 .container aside ul {
     list-style: none;
     padding-left: 0;
-}
-
-.container aside.closed ul {
-    display: none;
 }
 
 .container aside ul li {
@@ -91,6 +83,7 @@ nav h1 {
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0px 0px 5px 2px lightgrey;
+    transition: ease 0.1s;
 }
 
 .container aside ul li:hover {
