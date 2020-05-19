@@ -34,9 +34,11 @@ function createTextInputElement(placeholder, where, keyupCb) {
   const input = document.createElement("input");
   input.type = "text";
   input.placeholder = placeholder;
-  input.onkeyup = function (e) {
-    keyupCb(e);
-  };
+  if (keyupCb instanceof Function) {
+    input.onkeyup = function (e) {
+      keyupCb(e);
+    };
+  }
   return where.appendChild(input);
 }
 
